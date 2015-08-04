@@ -19,9 +19,21 @@
       <div ng-repeat="day in table.days">
         <div class='dayLayout' ng-controller='dayLayoutController'>
 
-          <div class='date'>{{ table.date }}</div>
+          <div class='date'>{{ day }}</div>
 
-          <div class='roomName' ng-repeat="room in table.rooms">{{ room }}</div>
+          <div class='roomName' style='width: {{ (100 / table.rooms.length) -.5 }}%' ng-repeat="room in table.rooms">{{ room }}</div>
+
+          <div class='eventBox' style='width: {{ (100 / table.rooms.length) -.5 }}%' ng-repeat='room in table.rooms'>
+
+            <div class='innerEventBox' ng-repeat='event in table[{{ room }}]'>
+
+              <div class='event' style="top: {{ event.start }}px; height: {{ event.duration }}px; ">
+                <span>{{ event.title }}</span> 
+              </div>
+
+            </div>
+
+          </div>
 
 
         </div>
@@ -37,6 +49,7 @@
   <script src="views/timeTable.js"></script>
   <script src="views/days.js"></script>
   <script src="views/day.js"></script>
+  <script src="views/event.js"></script>
   <script src="app.js"></script>
 
 </body>

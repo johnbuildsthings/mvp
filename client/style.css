@@ -3,7 +3,8 @@ body{
   position: relative;
 }
 
-.title, .timeTable, .daysLayout, h1, .dayLayout, .date{
+.title, .timeTable, .daysLayout, h1, .dayLayout, .date, 
+.roomName, .eventBox, .innerEventBox, .event{
   border: 1px solid black;
   margin: 0px;
   padding: 0px;
@@ -46,10 +47,10 @@ body{
 }
 
 .dayLayout{
-  height:100%;
+  height: 550px;
   /*width will be variable later but for now*/
   width: 500px;
-  float:left;
+  float: left;
 }
 
 .date{
@@ -59,8 +60,27 @@ body{
 }
 
 .roomName {
-  height: 2vh;
+  height: 6%;
   /*width will need to be variable at some point*/
-  width: 100px;
+  /*width: 32%;*/
   float: left;
+  text-align: center;
+}
+
+.eventBox {  
+  /*border:1px solid green;*/
+  height:83%;
+  width:32%;
+  position:relative;
+  float: left;
+}
+
+.innerEventBox {
+  height:500px;
+  position: absolute;
+}
+
+.event{
+  height:100px;
+  position: absolute;
 }
