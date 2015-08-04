@@ -9,9 +9,6 @@ module.exports = function(app, express){
 
   app.use(express.static(__dirname + '/../client/'));
 
-
-
-  // app.route('/').get()
   app.use('/', mainRoute);
 
   require('./mainRouter.js')(mainRoute);
