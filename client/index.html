@@ -6,14 +6,37 @@
   <link rel='stylesheet' type='text/css' href='style.css' />
 </head>
 <body>
-  <div ng-controller='appController'>
-    <h1>{{ title }}</h1>
+  <div class='title'  ng-controller='titleController'>
+    <h1 style='font-size:smaller;'>{{ title }}</h1>
   </div>
-  <div ng-controller='timeTableController'>
+  <div class='timeTable' ng-controller='timeTableController'>
     <div ng-repeat='time in table.times' style="border-top: 1px solid black; height:{{ table.height }}%; ">{{ time }}</div>
   </div>
-  <!-- <div ng-view></div> -->
+  
+  <div class='daysLayout' ng-controller='daysController'>
+
+    <div class='container'>
+      <div ng-repeat="day in table.days">
+        <div class='dayLayout' ng-controller='dayLayoutController'>
+
+          <div class='date'>{{ table.date }}</div>
+
+          <div class='roomName' ng-repeat="room in table.rooms">{{ room }}</div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
   <script src="views/title.js"></script>
+  <script src="views/timeTable.js"></script>
+  <script src="views/days.js"></script>
+  <script src="views/day.js"></script>
   <script src="app.js"></script>
 
 </body>

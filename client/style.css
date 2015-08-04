@@ -5,6 +5,9 @@ body{
 
 .title, .timeTable, .daysLayout, h1, .dayLayout, .date{
   border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  overflow:hidden;
 }
 
 .defaults{
@@ -34,10 +37,16 @@ body{
   height: 90vh;
   width: 94vw;
   float: right;
+  position:relative;
+  overflow-x:auto;
+}
+
+.container {
+  width:3000px;
 }
 
 .dayLayout{
-  height:99%;
+  height:100%;
   /*width will be variable later but for now*/
   width: 500px;
   float:left;
@@ -47,4 +56,11 @@ body{
   text-align:center;
   height:8%;
   width:100%;
+}
+
+.roomName {
+  height: 2vh;
+  /*width will need to be variable at some point*/
+  width: 100px;
+  float: left;
 }
