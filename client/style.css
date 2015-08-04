@@ -1,0 +1,50 @@
+
+body{
+  position: relative;
+}
+
+.title, .timeTable, .daysLayout, h1, .dayLayout, .date{
+  border: 1px solid black;
+}
+
+.defaults{
+  /*border: 0px;*/
+  margin: 0px;
+  padding: 0px;
+  overflow:hidden;
+
+}
+
+.title{
+  height:7vh;
+  width:98vw;
+  text-align: center;
+  font-size: 25pt;
+}
+
+.timeTable{
+  height: 90vh;
+  width: 4vw;
+  font-size:smaller;
+  position: absolute;
+  float: left;
+}
+
+.daysLayout{
+  height: 90vh;
+  width: 94vw;
+  float: right;
+}
+
+.dayLayout{
+  height:99%;
+  /*width will be variable later but for now*/
+  width: 500px;
+  float:left;
+}
+
+.date{
+  text-align:center;
+  height:8%;
+  width:100%;
+}

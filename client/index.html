@@ -1,12 +1,21 @@
 <!DOCTYPE HTML>
+<html ng-app='sched'>
 <head>
   <script src="../node_modules/angular/angular.js"></script>
 
+  <link rel='stylesheet' type='text/css' href='style.css' />
 </head>
 <body>
-  <div ng-view></div>
-
+  <div ng-controller='appController'>
+    <h1>{{ title }}</h1>
+  </div>
+  <div ng-controller='timeTableController'>
+    <div ng-repeat='time in table.times' style="border-top: 1px solid black; height:{{ table.height }}%; ">{{ time }}</div>
+  </div>
+  <!-- <div ng-view></div> -->
+  <script src="views/title.js"></script>
   <script src="app.js"></script>
+
 </body>
 
 </html>
