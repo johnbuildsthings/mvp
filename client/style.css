@@ -27,7 +27,7 @@ body{
 }
 
 .timeTable{
-  height: 90vh;
+  height: 75vh;
   width: 4vw;
   font-size:smaller;
   position: absolute;
@@ -82,5 +82,7 @@ body{
 
 .event{
   height:100px;
-  position: absolute;
+  width:99px;
+  position: relative;
+  z-index: 800;
 }

@@ -5,8 +5,8 @@ angular.module('sched.day', [])
     date: 'monday',
     rooms: ['westHall', 'eastWing', 'mainHall'],
     westHall: [{start: '0px', duration: '45px', title: 'breakfast'}],
-    eastWing: [{start: '20px', duration: '100px', title: 'HowTo'}],
+    eastWing: [{start: '60px', duration: '100px', title: 'HowTo'}],
     mainHall: [{start: '0px', duration: '45px', title: 'breakfast'},
-      {start: '20px', duration: '100px', title: 'HowTo'}]
+      {start: '50px', duration: '100px', title: 'HowTo'}]
   };
 });

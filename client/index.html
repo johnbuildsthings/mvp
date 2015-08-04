@@ -9,7 +9,7 @@
   <div class='title'  ng-controller='titleController'>
     <h1 style='font-size:smaller;'>{{ title }}</h1>
   </div>
-  <div class='timeTable' ng-controller='timeTableController'>
+  <div class='timeTable' style="top:130px" ng-controller='timeTableController'>
     <div ng-repeat='time in table.times' style="border-top: 1px solid black; height:{{ table.height }}%; ">{{ time }}</div>
   </div>
   
@@ -25,9 +25,9 @@
 
           <div class='eventBox' style='width: {{ (100 / table.rooms.length) -.5 }}%' ng-repeat='room in table.rooms'>
 
-            <div class='innerEventBox' ng-repeat='event in table[{{ room }}]'>
+            <div class='innerEventBox' ng-repeat='event in table[room]'>
 
-              <div class='event' style="top: {{ event.start }}px; height: {{ event.duration }}px; ">
+              <div class='event' style="top: {{ event.start }}; height: {{ event.duration }}; ">
                 <span>{{ event.title }}</span> 
               </div>
 
