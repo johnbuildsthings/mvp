@@ -9,4 +9,17 @@ angular.module('sched.day', [])
     mainHall: [{start: '0px', duration: '45px', title: 'breakfast'},
       {start: '50px', duration: '100px', title: 'HowTo'}]
   };
+
+
+})
+
+.factory('Events', function ($http){
+  var getEvents = function(next){
+    var request = $http({
+      method: 'get',
+      url: 'api/events'
+    })
+    return (request.then(next));
+  }
+  return ({getEvents: getEvents});
 });
