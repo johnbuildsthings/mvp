@@ -11,8 +11,10 @@
   "dependencies": {
     "angular": "^1.4.3",
     "angularjs": "0.0.1",
+    "bluebird": "^2.9.34",
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "path": "^0.11.14"
+    "path": "^0.11.14",
+    "q": "^1.4.1"
   }
 }
