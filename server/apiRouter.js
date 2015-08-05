@@ -27,8 +27,8 @@ var processData = function(date){
 
   
   utils.readJsonAsync()
-  .then(function(err, data){
-    if(err) console.log('error in processData');
+  .then(function(data){
+    // if(err) console.log('error in processData');
     data.forEach(function(event){
       if(event.event_start.split(' ')[0] === date){
         results.push(event);
