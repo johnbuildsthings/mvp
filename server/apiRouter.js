@@ -4,38 +4,30 @@ var utils = Promise.promisifyAll(require('./utils'));
 
 module.exports = function(app){
   app.get('/api/events', eventsRequest);
+
 }
 
-var eventsRequest = function(){
+var eventsRequest = function(request, response){
   var date = '2015-06-09';
-  processData(date);
+  response.json({data: processData(date)});
 }
 
-// var readJson = function(next){
-//   fs.readFileAsync('data/ApiDump.json', 'utf8')
-//   .then(function(err, data){
-//     if(err) console.log('error');
-
-//     var parsed = JSON.parse(data);
-//     // console.log(parsed[0]);
-//     return parsed;
-//   }).then(next);
-// }
 
 var processData = function(date){
-  var results = [];
+  // var results = [];
 
-  
-  utils.readJsonAsync()
+  return utils.readJson()
   .then(function(data){
-    // if(err) console.log('error in processData');
-    data.forEach(function(event){
+
+    var results = []; 
+    JSON.parse(data).forEach(function(event){
       if(event.event_start.split(' ')[0] === date){
         results.push(event);
       }
     });
+
+    return results;
   });
-  console.log('processData: ', results);  
 }
 
-eventsRequest();
+// eventsRequest();

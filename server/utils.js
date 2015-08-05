@@ -4,16 +4,25 @@ var fs = Promise.promisifyAll(require('fs'));
 
 exports.readJson = function(){
   var fileName = __dirname + '/data/ApiDump.json';
-  console.log(fileName);
-  fs.readFileAsync(fileName, 'utf8')
-  .then( function(data){
-    // if(err) console.log('error in readJson', err.message);
-    // else{
-      var parsed = JSON.parse(data);
-      console.log('read Json: ', parsed[0]);
-      return parsed;
-    // }
-  });
+
+  return fs.readFileAsync(fileName, 'utf8')
 }
 
-exports.readJson();
+
+// exports.processData = function(date){
+//   var results = [];
+
+//   return readJson()
+//   .then(function(data){
+//     // console.log('hello')
+//     JSON.parse(data).forEach(function(event){
+//       if(event.event_start.split(' ')[0] === date){
+//         results.push(event);
+//         // console.log(event.name);
+//       }
+//     });
+//   });
+//   /*.then(return results)*/;
+//   // console.log(results);
+// }
+// exports.readJson();
